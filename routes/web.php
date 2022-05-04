@@ -14,15 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::prefix('/app')->group(function(){
+Route::prefix('/app')->group(function () {
 
-    Route::get('/clientes', 'ClienteController@index')->name('app.clientes');
-    Route::post('/clientes', 'ClienteController@salvar')->name('app.clientes');
-    
+    Route::get('/clientes-cadastro', 'ClienteController@index')->name('app.clientes-cadastro');
+    Route::post('/clientes-cadastro', 'ClienteController@salvar')->name('app.clientes-cadastro');
 });
 
-
-Route::fallback(function(){
-    echo 'Endereço acessado inexistente. <a href="'.route('app.clientes').'">Clique Aqui</a> Para ir para página incial';
+Route::fallback(function () {
+    echo 'Endereço acessado inexistente. <a href="' . route('app.clientes-cadastro') . '">Clique Aqui</a> Para ir para página incial';
 });
-
