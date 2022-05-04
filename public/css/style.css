@@ -1,0 +1,14 @@
+div#barraDeNavegacao {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid rgba(194, 183, 183, 0.500);
+}
+
+footer#rodape {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    border-top: 0.5px solid rgba(194, 183, 183, 0.500);
+    ;
+}
