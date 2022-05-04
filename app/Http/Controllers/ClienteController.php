@@ -20,7 +20,6 @@ class ClienteController extends Controller
         $request->validate([
             'tipo_pessoa' => 'required',
             'email' => 'required|unique:app_clientes',
-            'telefone' => 'required|min:8|max:11',
             'logradouro' => 'required|max:30',
             'cep' => 'required|max:8',
             'bairro' => 'required|max:50',
