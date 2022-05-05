@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class AppCliente extends Model
 {
-    protected $fillable = ['tipo_pessoa','nome_completo', 'email', 'telefone', 'cpf', 'logradouro', 'cep', 'bairro', 'estado',
-    'razaoSocial', 'cnpj', 'nomeResponsavel', 'telefoneResponsavel'];
+    protected $fillable = [
+        'tipo_pessoa','nome', 'email', 'telefone', 'cpf', 'logradouro', 'cep', 'bairro',
+        'cidade', 'estado', 'razaoSocial', 'cnpj', 'nomeResponsavel', 'telefoneResponsavel'
+    ];
 }

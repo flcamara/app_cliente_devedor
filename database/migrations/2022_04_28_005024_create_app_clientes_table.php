@@ -16,13 +16,14 @@ class CreateAppClientesTable extends Migration
         Schema::create('app_clientes', function (Blueprint $table) {
             $table->id();
             $table->integer('tipo_pessoa');
-            $table->string('nome_completo', 50)->nullable();
+            $table->string('nome', 50)->nullable();
             $table->string('email', 80)->unique();
             $table->string('telefone', 20)->nullable();
             $table->string('cpf', 11)->unique()->nullable();
             $table->string('logradouro', 30);
             $table->string('cep', 8);
             $table->string('bairro', 50);
+            $table->string('cidade', 30);
             $table->string('estado', 20);
             $table->string('razaoSocial', 50)->nullable();
             $table->string('cnpj', 14)->unique()->nullable();

@@ -7,9 +7,8 @@ use App\AppCliente;
 
 class ClienteController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-
         return view('app.cadastra_cliente');
     }
 
@@ -23,7 +22,8 @@ class ClienteController extends Controller
             'logradouro' => 'required|max:30',
             'cep' => 'required|max:8',
             'bairro' => 'required|max:50',
-            'estado' => 'required|max:20',
+            'cidade' => 'required|max:30',
+            'estado' => 'required|max:20'
         ]);
 
         //Função mais enxuta que cria o registro dos dados no banco e redireciona para rota
