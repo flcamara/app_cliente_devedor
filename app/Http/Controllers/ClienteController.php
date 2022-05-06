@@ -20,7 +20,7 @@ class ClienteController extends Controller
             'tipo_pessoa' => 'required',
             'email' => 'required|unique:app_clientes',
             'logradouro' => 'required|max:30',
-            'cep' => 'required|max:8',
+            'cep' => 'required|max:9',
             'bairro' => 'required|max:50',
             'cidade' => 'required|max:30',
             'estado' => 'required|max:20'

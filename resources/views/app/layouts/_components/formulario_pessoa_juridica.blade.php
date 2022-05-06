@@ -12,7 +12,7 @@
             <label for="floatingInput">Razão social</label>
         </div>
         <div class="form-floating mb-3 col-md-2 ms-1">
-            <input type="text" name="cnpj" class="form-control" id="floatingInput" placeholder="CNPJ" maxlength="14" required>
+            <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="CNPJ" maxlength="14" required>
             <label for="floatingInput">CNPJ</label>
         </div>
         <div class="form-floating mb-3 col-md-5 ms-1">
@@ -20,7 +20,7 @@
             <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating mb-3 col-md-2 ms-1">
-            <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" maxlength="20" required>
+            <input type="text" name="telefone" class="form-control" id="telefone_do_pj" placeholder="Telefone" maxlength="20" required>
             <label for="floatingInput">Telefone</label>
         </div>
         <div class="form-floating mb-3 col-md-7 ms-1">
@@ -32,7 +32,7 @@
             <label for="floatingInput">Bairro</label>
         </div>
         <div class="form-floating mb-3 col-md-2 ms-1">
-            <input type="text" name="cep" class="form-control" id="floatingInput" placeholder="CEP" maxlength="8" required>
+            <input type="text" name="cep" class="form-control" id="cep_pj" placeholder="CEP" maxlength="8" required>
             <label for="floatingInput">CEP</label>
         </div>
         <div class="form-floating mb-3 col-md-5 ms-1">
@@ -48,7 +48,7 @@
             <label for="floatingInput">Nome responsável</label>
         </div>
         <div class="form-floating mb-3 col-md-2 ms-1">
-            <input type="text" name="telefoneResponsavel" class="form-control" id="floatingInput" placeholder="Telefone responsável" maxlength="20" required>
+            <input type="text" name="telefoneResponsavel" class="form-control" id="telefone_responsavel" placeholder="Telefone responsável" maxlength="20" required>
             <label for="floatingInput">Telefone responsável</label>
         </div>
 
