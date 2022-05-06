@@ -8,39 +8,39 @@
         <input type="hidden" name="tipo_pessoa" value="1">
 
         <div class="form-floating mb-3 col-md-5 ms-1">
-            <input type="text" name="nome" class="form-control" id="floatingInput" placeholder="Nome" required>
+            <input type="text" name="nome" class="form-control" id="floatingInput" placeholder="Nome" maxlength="50" required>
             <label for="floatingInput">Nome</label>
         </div>
         <div class="form-floating mb-3 col-md-3 ms-1">
-            <input type="text" name="cpf" class="form-control" id="floatingInput" placeholder="CPF" required>
+            <input type="text" name="cpf" class="form-control" id="floatingInput" placeholder="CPF" maxlength="11" required>
             <label for="floatingInput">CPF</label>
         </div>
         <div class="form-floating mb-3 col-md-5 ms-1">
-            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" required>
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" maxlength="80" required>
             <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating mb-3 col-md-3 ms-1">
-            <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" required>
+            <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" maxlength="20" required>
             <label for="floatingInput">Telefone</label>
         </div>
         <div class="form-floating mb-3 col-md-4 ms-1">
-            <input type="text" name="logradouro" class="form-control" id="floatingInput" placeholder="Logradouro" required>
+            <input type="text" name="logradouro" class="form-control" id="floatingInput" placeholder="Logradouro" maxlength="30" required>
             <label for="floatingInput">Logradouro</label>
         </div>
         <div class="form-floating mb-3 col-md-4 ms-1">
-            <input type="text" name="bairro" class="form-control" id="floatingInput" placeholder="Bairro" required>
+            <input type="text" name="bairro" class="form-control" id="floatingInput" placeholder="Bairro" maxlength="50" required>
             <label for="floatingInput">Bairro</label>
         </div>
         <div class="form-floating mb-3 col-md-5 ms-1">
-            <input type="text" name="cidade" class="form-control" id="floatingInput" placeholder="Cidade" required>
+            <input type="text" name="cidade" class="form-control" id="floatingInput" placeholder="Cidade" maxlength="30" required>
             <label for="floatingInput">Cidade</label>
         </div>
         <div class="form-floating mb-3 col-md-3 ms-1">
-            <input type="text" name="cep" class="form-control" id="floatingInput" placeholder="CEP" required>
+            <input type="text" name="cep" class="form-control" id="floatingInput" placeholder="CEP" maxlength="8" required>
             <label for="floatingInput">CEP</label>
         </div>
         <div class="form-floating mb-3 col-md-8 ms-1">
-            <input type="text" name="estado" class="form-control" id="floatingInput" placeholder="Estado" required>
+            <input type="text" name="estado" class="form-control" id="floatingInput" placeholder="Estado" maxlength="20" required>
             <label for="floatingInput">Estado</label>
         </div>
 
