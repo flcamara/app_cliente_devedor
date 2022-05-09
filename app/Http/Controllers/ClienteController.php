@@ -29,8 +29,8 @@ class ClienteController extends Controller
         /*
             Removendo caracteres quem vem das máscaras ('(', ')', '-', ' ', '.', '/') usando expressão regular (REGEX).
             Função preg_replace(regex, valor a ser mudado, string para ser mudada)
-                - Exemplo de campo regex:
-                    - /[-() ]/ -> O regex vai procurar caracteres '-', '(', ')' e ' '
+                Exemplo de campo regex:
+                    /[-() ]/ -> O regex vai procurar caracteres '-', '(', ')' e ' '
         */
 
         $dados = $request->all();  // Pegando todos os dados do request
@@ -46,6 +46,6 @@ class ClienteController extends Controller
 
         // Função mais enxuta que cria o registro dos dados no banco e redireciona para rota da página inicial
         AppCliente::create($dados);
-        return redirect()->route('aaaa');
+        return redirect()->route('paginainicial');
     }
 }
