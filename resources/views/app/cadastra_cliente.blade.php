@@ -6,6 +6,7 @@
 @section('titulo', 'Cadastrar cliente')
 @section('counteudo')
 
+
 {{-- Botões (Início) --}}
 <ul class="nav nav-pills mb-3 col-3 mx-auto" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -27,7 +28,7 @@
     </div>
 </div>
 {{-- Botões (Fim) --}}
-
+@endsection
 
 
 {{-- <div>
@@ -74,4 +75,4 @@
         </div>
     </div>
 </div> --}}
-@endsection
+

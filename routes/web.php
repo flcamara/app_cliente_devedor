@@ -20,6 +20,8 @@ Route::prefix('/app')->group(function () {
     Route::post('/clientes-cadastro', 'ClienteController@salvar')->name('app.clientes-cadastro');
 });
 
-Route::fallback(function () {
-    echo 'Endereço acessado inexistente. <a href="' . route('app.clientes-cadastro') . '">Clique Aqui</a> Para ir para página incial';
-});
+Route::fallback('ErroController@index')->name('app.error404');
+
+Route::get('/login', 'LoginController@index')->name('app.login');
+Route::post('/login', 'LoginController@index')->name('app.login');
+
