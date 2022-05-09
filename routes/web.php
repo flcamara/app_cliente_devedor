@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::match(['get','post'], '/', 'LoginController@login')->name('login'); 
+
+Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('alterarsenha');
+
+Route::match(['get','post'], '/pagina-inicial', 'PaginaInicialController@home')->name('paginainicial');
+
+Route::match(['get','post'], '/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('cad.usuario');
+
+Route::match(['get','post'], '/cadastrar-divida', 'CadastrarDividaController@cadastrardivida')->name('cad.divida');
+
+Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vinculardivida')->name('vinc.divida');
+
+Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('listar.divida');
+
+Route::match(['get','post'], '/pesquisa-cliente', 'PesquisaClienteController@pesquisacliente')->name('pesquisa.cdv');  
+ /*cdv=cliente devedor*/ 
+
+Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('listar.cliente');
+
 
 Route::prefix('/app')->group(function () {
 
