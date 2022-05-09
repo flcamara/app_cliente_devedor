@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::match(['get','post'], '/', 'LoginController@login')->name('login'); 
+Route::match(['get','post'], '/', 'LoginController@login')->name('login');
 
 Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('alterarsenha');
 
@@ -27,10 +27,10 @@ Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vincu
 
 Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('listar.divida');
 
-Route::match(['get','post'], '/pesquisa-cliente', 'PesquisaClienteController@pesquisacliente')->name('pesquisa.cdv');  
- /*cdv=cliente devedor*/ 
+Route::match(['get','post'], '/pesquisar-cliente', 'PesquisaClienteController@pesquisarCliente')->name('pesquisa.cdv');
+ /*cdv=cliente devedor*/
 
-Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('listar.cliente');
+// Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('listar.cliente');
 
 
 Route::prefix('/app')->group(function () {

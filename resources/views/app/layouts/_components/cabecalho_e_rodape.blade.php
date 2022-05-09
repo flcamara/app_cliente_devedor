@@ -19,7 +19,7 @@
     @include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
 
-    {{-- Informando aonde o conteúdo extendido (app/cliente.blade.php) vai ser colocado --}}
+    {{-- Informando aonde o conteúdo extendido vai ser colocado --}}
     @yield('counteudo')
 
 
