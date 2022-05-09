@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class PaginaInicialController extends Controller
 {
-    
-    public function paginainicial() {
+    public function home()
+    {
         return view('app.paginainicial');
     }
 }
