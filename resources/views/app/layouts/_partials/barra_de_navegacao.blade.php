@@ -25,7 +25,7 @@
                         <a href="#" class="nav-link">Cadastrar dívidas</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Sair</a>
+                        <a href="{{ url('/app/sair') }}" class="nav-link">Sair</a>
                     </li>
                 </ul>
             </div>

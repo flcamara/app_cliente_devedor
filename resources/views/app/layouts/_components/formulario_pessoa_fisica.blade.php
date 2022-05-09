@@ -1,7 +1,7 @@
 <div class="container mt-5 text-center">
     <h1>Cadastro de pessoa física</h1>
 
-    <form action="{{ route('app.clientes-cadastro') }}" class="row g-1 justify-content-center" method="POST">
+    <form action="{{ route('app.cadastra_cliente') }}" class="row g-1 justify-content-center" method="POST">
         @csrf
 
         {{-- Informa o tipo de pessoa (PF=1 ou PJ=2) para o banco de dados --}}

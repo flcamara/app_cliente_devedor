@@ -11,7 +11,7 @@
             <h1>Oops!</h1>
             <h2>Erro 404</h2>
             <p>Desculpe, endereço inválido, Página não encontrada!</p>
-            <a href="{{ url('app/clientes-cadastro') }}" class="btn btn-primary btn-sm">
+            <a href="{{ url('/') }}" class="btn btn-primary btn-sm">
                 Início</a>
         </div>
     </div>

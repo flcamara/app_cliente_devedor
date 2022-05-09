@@ -13,34 +13,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::match(['get','post'], '/', 'LoginController@login')->name('login'); 
+Route::get('login/{erro?}', 'LoginController@erro')->name('app.login');
+Route::post('/login', 'LoginController@autenticar')->name('app.login');
 
-Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('alterarsenha');
-
-Route::match(['get','post'], '/pagina-inicial', 'PaginaInicialController@home')->name('paginainicial');
-
-Route::match(['get','post'], '/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('cad.usuario');
-
-Route::match(['get','post'], '/cadastrar-divida', 'CadastrarDividaController@cadastrardivida')->name('cad.divida');
-
-Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vinculardivida')->name('vinc.divida');
-
-Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('listar.divida');
-
-Route::match(['get','post'], '/pesquisa-cliente', 'PesquisaClienteController@pesquisacliente')->name('pesquisa.cdv');  
- /*cdv=cliente devedor*/ 
-
-Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('listar.cliente');
+Route::get('/', 'PrincipalController@index')->name('index');
 
 
-Route::prefix('/app')->group(function () {
+Route::middleware('autenticar.acesso')->prefix('/app')->group(function () {
 
-    Route::get('/clientes-cadastro', 'ClienteController@index')->name('app.clientes-cadastro');
-    Route::post('/clientes-cadastro', 'ClienteController@salvar')->name('app.clientes-cadastro');
+    Route::get('/sair', 'LoginController@sair')->name('app.sair');
+
+    Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('app.alterarsenha');
+
+    Route::match(['get','post'], '/pagina-inicial', 'PaginaInicialController@home')->name('app.paginainicial');
+
+    Route::match(['get','post'], '/cadastrar-divida', 'CadastrarDividaController@cadastrardivida')->name('app.cadastro.divida');
+
+    Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vinculardivida')->name('app.vincular.divida');
+
+    Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('app.listar.divida');
+
+    Route::match(['get','post'], '/pesquisa-cliente', 'PesquisaClienteController@pesquisacliente')->name('app.pesquisa.cliente');  
+    /*cdv=cliente devedor*/ 
+
+    Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('app.listar.cliente');
+
+    Route::get('/cadastra-cliente', 'ClienteController@index')->name('app.cadastra_cliente');
+    Route::post('/cadastra-cliente', 'ClienteController@salvar')->name('app.cadastra_cliente');
+
+    Route::middleware('acesso.admin')->group(function(){
+    Route::get('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
+    Route::post('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
+    });
+
 });
 
 Route::fallback('ErroController@index')->name('app.error404');
-
-Route::get('/login', 'LoginController@index')->name('app.login');
-Route::post('/login', 'LoginController@index')->name('app.login');
-
