@@ -16,13 +16,13 @@
             <div class="collpase navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
                     <li>
-                        <a href="#" class="nav-link">Clientes devedores</a>
+                        <a href="#" class="nav-link">Clientes</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link active">Cadastrar clientes</a>
+                        <a href="#" class="nav-link">Usuários</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Cadastrar dívidas</a>
+                        <a href="#" class="nav-link">Dívidas</a>
                     </li>
                     <li>
                         <a href="{{ url('/app/sair') }}" class="nav-link">Sair</a>

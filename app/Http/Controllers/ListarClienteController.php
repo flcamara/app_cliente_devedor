@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class ListarClienteController extends Controller
 {
-    public function listarcliente() {
+    public function listarcliente()
+    {
         return view('app.listarcliente');
     }
 }

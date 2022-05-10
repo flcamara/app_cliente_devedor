@@ -1,5 +1,5 @@
 <div class="container mt-5 text-center">
-    <h1>Cadastro de pessoa jurídica</h1>
+    <h2>Cadastro de pessoa jurídica</h2>
 
     <form action="{{ route('app.cadastra_cliente') }}" class="row g-1 justify-content-center" method="POST">
         @csrf
