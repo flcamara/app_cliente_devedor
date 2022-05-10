@@ -2,16 +2,16 @@
 
 <ul>
  <li>
-        <a href="{{ route('login') }}">cadastrar usuarios</a> 
+        <a href="#">cadastrar usuarios</a>
  </li>
  <li>
-        <a href="{{ route('cad.divida') }}">cadastrar dividas</a>
+        <a href="#">cadastrar dividas</a>
  </li>
  <li>
-        <a href="{{ route('vinc.divida') }}">vincular dividas</a>
+        <a href="#">vincular dividas</a>
  </li>
  <li>
-        <a href="{{ route('pesquisa.cdv') }}">pesquisa de clientes devedores</a>
+        <a href="#">pesquisa de clientes devedores</a>
  </li>
 </ul>
 

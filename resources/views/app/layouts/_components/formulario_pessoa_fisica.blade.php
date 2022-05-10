@@ -44,7 +44,7 @@
             <label for="floatingInput">Estado</label>
         </div>
 
-        <div d-flex justify-content-cente>
+        <div d-flex justify-content-center id="div-botao-cliente-PF">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>

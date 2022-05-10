@@ -15,17 +15,19 @@ class PesquisaClienteController extends Controller
      */
     public function pesquisarCliente(Request $request)
     {
+        $request->validate([
+            'pesquisaClienteDevedor' => 'min:1',  // Validando para não ser possivel fazer uma pesquisa vazia
+        ]);
+
         $consulta = "";
 
         // Entra se houver requisição. Se a consulta for feita, a solicitação não vai estar vazia
         if (count($request->all()) != 0) {
             $pesquisa = $request->all()['pesquisaClienteDevedor'];
 
-            $consulta = AppCliente::where('nome', $pesquisa)
+            $consulta = AppCliente::where('nome', 'like', "%$pesquisa%")  // Operarador LIKE do SQL (SELECT * FROM <tabela> WHERE <coluna> LIKE '%pesquisa%')
                                     ->orWhere('cpf', $pesquisa)
                                     ->orWhere('cnpj', $pesquisa)->get();
-
-            // dd($consulta);
         }
 
         return view('app.pesquisa_cliente', ['consulta' => $consulta]);
