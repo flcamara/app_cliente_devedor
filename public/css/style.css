@@ -12,15 +12,18 @@ footer#rodape {
     border-top: 0.5px solid rgba(194, 183, 183, 0.500);
 }
 
+#div-botao-cliente-PF,
+#div-botao-cliente-PJ {
+    margin-bottom: 15px;
+}
 
-
-.regua{
+.regua {
     padding: 121px;
     width: 100%;
     text-align: center;
 }
 
-  
+
 .icon-square {
     display: inline-flex;
     align-items: center;
@@ -29,7 +32,7 @@ footer#rodape {
     height: 3rem;
     font-size: 1.5rem;
     border-radius: .75rem;
-  }
+}
 
 
 @media screen and (min-width: 800px) {

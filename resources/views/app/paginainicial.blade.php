@@ -8,7 +8,7 @@
 
 @section('counteudo')
 
-  <div class="container px-4 py-5" id="hanging-icons">
+<div class="container px-4 py-5" id="hanging-icons">
       <h2 class="pb-2 border-bottom">Home</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex align-items-start">
@@ -20,6 +20,9 @@
             <p>Cadastre um novo cliente</p>
             <a href="{{ url('/app/cadastra-cliente') }}" class="btn btn-primary">
               Cadastrar
+            </a>
+            <a href="{{ url('/app/pesquisa-cliente') }}">
+                <button type="button" class="btn btn-info">Pesquisar</button>
             </a>
           </div>
         </div>
