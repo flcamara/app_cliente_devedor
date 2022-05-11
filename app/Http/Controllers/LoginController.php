@@ -69,9 +69,9 @@ class LoginController extends Controller
            $_SESSION['username'] = $usuario->username;
            $_SESSION['type'] = $usuario->type;
 
-        //    dd($_SESSION);
+        //dd($_SESSION);
 
-           return redirect()->route('app.cadastra_cliente');
+           return redirect()->route('app.paginainicial');
         }else{
             return redirect()->route('app.login', ['erro' => 1]);
         }

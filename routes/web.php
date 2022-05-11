@@ -25,7 +25,7 @@ Route::middleware('autenticar.acesso')->prefix('/app')->group(function () {
 
     Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('app.alterarsenha');
 
-    Route::match(['get','post'], '/pagina-inicial', 'PaginaInicialController@home')->name('app.paginainicial');
+    Route::match(['get','post'], '/home', 'PaginaInicialController@home')->name('app.paginainicial');
 
     Route::match(['get','post'], '/cadastrar-divida', 'CadastrarDividaController@cadastrardivida')->name('app.cadastro.divida');
 

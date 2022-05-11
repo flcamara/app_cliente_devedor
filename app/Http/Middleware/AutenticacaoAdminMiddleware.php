@@ -20,7 +20,7 @@ class AutenticacaoAdminMiddleware
         if($tipo == 1){
             return $next($request);
         }else{
-            return redirect()->route('app.cadastra_cliente');
+            return redirect()->route('app.paginainicial');
         }
     }
 }

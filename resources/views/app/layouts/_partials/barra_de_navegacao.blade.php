@@ -1,7 +1,7 @@
 <div class="container-fluid bg-light" id="barraDeNavegacao">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="#" class="navbar-brand">Cliente devedor</a>
+            <a href="{{ url('/app/home') }}" class="navbar-brand">Cliente devedor</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -16,13 +16,13 @@
             <div class="collpase navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
                     <li>
-                        <a href="#" class="nav-link">Clientes</a>
+                        <a href="{{ url('/app/cadastra-cliente') }}" class="nav-link">Clientes</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Usuários</a>
+                        <a href="{{ url('/app/cadastrar-usuario') }}" class="nav-link">Usuários</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Dívidas</a>
+                        <a href="{{ url('/app/cadastrar-divida') }}" class="nav-link">Dívidas</a>
                     </li>
                     <li>
                         <a href="{{ url('/app/sair') }}" class="nav-link">Sair</a>

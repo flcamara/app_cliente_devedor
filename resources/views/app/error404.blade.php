@@ -1,5 +1,8 @@
 {{-- Permitindo que app/_componets/cabecalho_e_rodape.blade.php possa usar meu template --}}
 @extends('app.layouts._components.cabecalho_e_rodape')
+@extends('app.layouts._components.head_login')
+
+
 
 @section('titulo', 'Página não encontrada')
 

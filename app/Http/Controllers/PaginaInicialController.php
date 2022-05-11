@@ -10,4 +10,5 @@ class PaginaInicialController extends Controller
     {
         return view('app.paginainicial');
     }
+    
 }
