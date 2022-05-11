@@ -10,8 +10,6 @@ footer#rodape {
     font-size: 1em;
     margin-top: 10px;
     border-top: 0.5px solid rgba(194, 183, 183, 0.500);
-    position: relative;
-    bottom: 0;
 }
 
 
@@ -35,18 +33,18 @@ footer#rodape {
 
 
 @media screen and (min-width: 800px) {
-.login{
-    margin-left: 300px;
-    margin-top:100px;
-    margin-right: 300px;
-    padding: 10px;
-    border-radius: 4px;
+    .login {
+        margin-left: 300px;
+        margin-top: 100px;
+        margin-right: 300px;
+        padding: 10px;
+        border-radius: 4px;
+    }
 }
-  }
 
 
-  @media screen and (max-width: 800px) {
-    .login{
+@media screen and (max-width: 800px) {
+    .login {
         margin-top: 200px
     }
-      }
+}

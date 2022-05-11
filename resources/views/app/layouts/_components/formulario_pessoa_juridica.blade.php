@@ -52,7 +52,7 @@
             <label for="floatingInput">Telefone responsável</label>
         </div>
 
-        <div d-flex justify-content-cente>
+        <div d-flex justify-content-center id="div-botao-cliente-PJ">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>

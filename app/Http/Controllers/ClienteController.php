@@ -46,6 +46,6 @@ class ClienteController extends Controller
 
         // Função mais enxuta que cria o registro dos dados no banco e redireciona para rota da página inicial
         AppCliente::create($dados);
-        return redirect()->route('paginainicial');
+        return redirect()->route('app.paginainicial');
     }
 }

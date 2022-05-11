@@ -33,19 +33,17 @@ Route::middleware('autenticar.acesso')->prefix('/app')->group(function () {
 
     Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('app.listar.divida');
 
-    Route::match(['get','post'], '/pesquisa-cliente', 'PesquisaClienteController@pesquisacliente')->name('app.pesquisa.cliente');  
-    /*cdv=cliente devedor*/ 
+    Route::get('/pesquisa-cliente', 'PesquisaClienteController@pesquisarCliente')->name('app.pesquisa.cliente');
 
     Route::match(['get','post'], '/listar-cliente', 'ListarClienteController@listarcliente')->name('app.listar.cliente');
 
     Route::get('/cadastra-cliente', 'ClienteController@index')->name('app.cadastra_cliente');
     Route::post('/cadastra-cliente', 'ClienteController@salvar')->name('app.cadastra_cliente');
 
-    Route::middleware('acesso.admin')->group(function(){
-    Route::get('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
-    Route::post('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
+    Route::middleware('acesso.admin')->group(function () {
+        Route::get('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
+        Route::post('/cadastrar-usuario', 'CadastrarUsuarioController@cadastrarusuario')->name('app.cadastro-usuario');
     });
-
 });
 
 Route::fallback('ErroController@index')->name('app.error404');
