@@ -41,12 +41,6 @@
             <a href="{{ url('/app/listar-divida') }}" class="btn btn-sm btn-info">
               Listar
             </a>
-            <a href="{{ url('/app/vincular-divida') }}" class="btn btn-sm btn-success">
-                Vincular
-              </a>
-            {{-- <a href="{{ url('/app/vincular-divida') }}">
-                <button type="button" class="btn btn-success">Vincular</button>
-            </a> --}}
           </div>
         </div>
           <div class="col d-flex align-items-start">
