@@ -29,7 +29,7 @@ Route::middleware('autenticar.acesso')->prefix('/app')->group(function () {
 
     Route::match(['get','post'], '/cadastrar-divida', 'CadastrarDividaController@cadastrardivida')->name('app.cadastro.divida');
 
-    Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vinculardivida')->name('app.vincular.divida');
+    Route::match(['get','post'], '/vincular-divida', 'VincularDividaController@vincular')->name('app.vincular.divida');
 
     Route::match(['get','post'], '/listar-divida', 'ListarDividaController@listardivida')->name('app.listar.divida');
 

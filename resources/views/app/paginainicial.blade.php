@@ -18,7 +18,7 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#person"/></svg>
           </div>
           <div>
-            <h2>Cliente</h2>
+            <h2>Clientes</h2>
             <p>Cadastre um novo cliente, ou consulte um já existente.</p>
             <a href="{{ url('/app/cadastra-cliente') }}" class="btn btn-sm btn-primary">
               Cadastrar
@@ -33,7 +33,7 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#debt"/></svg>
           </div>
           <div>
-            <h2>Divida</h2>
+            <h2>Dívidas</h2>
             <p>Cadastre uma nova divida, ou consulte algum débito já existente</p>
             <a href="{{ url('/app/cadastrar-divida') }}" class="btn btn-sm btn-primary">
               Cadastrar
@@ -41,6 +41,12 @@
             <a href="{{ url('/app/listar-divida') }}" class="btn btn-sm btn-info">
               Listar
             </a>
+            <a href="{{ url('/app/vincular-divida') }}" class="btn btn-sm btn-success">
+                Vincular
+              </a>
+            {{-- <a href="{{ url('/app/vincular-divida') }}">
+                <button type="button" class="btn btn-success">Vincular</button>
+            </a> --}}
           </div>
         </div>
           <div class="col d-flex align-items-start">
@@ -48,7 +54,7 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#admin"/></svg>
           </div>
           <div>
-            <h2>Usuarios</h2>
+            <h2>Usuários</h2>
             <p>Acesso restrito. Apenas Administradores conseguem acessar</p>
 
             @if($_SESSION['type'] == 1)
