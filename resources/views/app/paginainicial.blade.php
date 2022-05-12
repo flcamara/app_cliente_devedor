@@ -17,12 +17,12 @@
           </div>
           <div>
             <h2>Cliente</h2>
-            <p>Cadastre um novo cliente</p>
-            <a href="{{ url('/app/cadastra-cliente') }}" class="btn btn-primary">
+            <p>Cadastre um novo cliente, ou consulte um já existente.</p>
+            <a href="{{ url('/app/cadastra-cliente') }}" class="btn btn-sm btn-primary">
               Cadastrar
             </a>
             <a href="{{ url('/app/pesquisa-cliente') }}">
-                <button type="button" class="btn btn-info">Pesquisar</button>
+                <button type="button" class="btn btn-sm btn-info">Pesquisar</button>
             </a>
           </div>
         </div>
@@ -32,9 +32,12 @@
           </div>
           <div>
             <h2>Divida</h2>
-            <p>Cadastre uma nova divida</p>
-            <a href="{{ url('/app/cadastrar-divida') }}" class="btn btn-primary">
+            <p>Cadastre uma nova divida, ou consulte algum débito já existente</p>
+            <a href="{{ url('/app/cadastrar-divida') }}" class="btn btn-sm btn-primary">
               Cadastrar
+            </a>
+            <a href="{{ url('/app/listar-divida') }}" class="btn btn-sm btn-info">
+              Pesquisar
             </a>
           </div>
         </div>
@@ -45,9 +48,16 @@
           <div>
             <h2>Usuarios</h2>
             <p>Acesso restrito. Apenas Administradores conseguem acessar</p>
-            <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-primary">
+
+            @if($_SESSION['type'] == 1)
+              <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-sm btn-primary">
               Acessar
             </a>
+            @else
+            <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-sm btn-primary disabled">
+              Acessar
+            </a>
+            @endif
           </div>
         </div>
       </div>

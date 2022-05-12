@@ -17,6 +17,7 @@ class AutenticacaoMiddleware
     {
         session_start();
 
+        $tipo = $_SESSION['type'];
         
         if(isset($_SESSION['email']) && $_SESSION['email'] != ''){
             
