@@ -1,12 +1,14 @@
+
 {{-- Permitindo que app/_componets/cabecalho_e_rodape.blade.php possa usar meu template --}}
 @extends('app.layouts._components.cabecalho_e_rodape')
 @extends('app.layouts._components.head_login')
 
 
-
 @section('titulo', 'Home')
 
 @section('counteudo')
+
+@include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
 <div class="container px-4 py-5" id="hanging-icons">
       <h2 class="pb-2 border-bottom">Home</h2>
@@ -37,7 +39,7 @@
               Cadastrar
             </a>
             <a href="{{ url('/app/listar-divida') }}" class="btn btn-sm btn-info">
-              Pesquisar
+              Listar
             </a>
           </div>
         </div>
@@ -63,6 +65,6 @@
       </div>
     </div>
 
+@include('app.layouts._partials.rodape')  {{-- Inlcuindo rodapé --}}
+
 @endsection
-
-
