@@ -4,6 +4,8 @@
 
 @section('counteudo')
 
+@include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
+
 <div class="container mt-5 text-center">
     <h2>Pesquisa de clientes devedores</h2>
     <form action="{{ route('app.pesquisa.cliente') }}" class="row g-3 justify-content-center mt-1" method="GET">
@@ -51,5 +53,7 @@
         @endif
     </div>
 @endif
+
+@include('app.layouts._partials.rodape')  {{-- Inlcuindo rodapé --}}
 
 @endsection
