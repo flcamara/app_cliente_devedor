@@ -6,11 +6,11 @@
 
 @section('titulo', 'Home')
 
-@section('counteudo')
+@section('conteudo')
 
 <div class="container px-4 py-5" id="hanging-icons">
       <h2 class="pb-2 border-bottom">Home</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 justify-content-center">
         <div class="col d-flex align-items-start">
           <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
             <svg class="bi" width="1em" height="1em"><use xlink:href="#person"/></svg>
@@ -41,6 +41,9 @@
             </a>
           </div>
         </div>
+
+        {{--Habilitando apenas para administradores--}}
+        @if($_SESSION['type'] == 1)
           <div class="col d-flex align-items-start">
           <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
             <svg class="bi" width="1em" height="1em"><use xlink:href="#admin"/></svg>
@@ -48,18 +51,17 @@
           <div>
             <h2>Usuarios</h2>
             <p>Acesso restrito. Apenas Administradores conseguem acessar</p>
-
-            @if($_SESSION['type'] == 1)
               <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-sm btn-primary">
               Acessar
             </a>
-            @else
+            {{-- Caso seja melhor habilitar para todos os usuarios a visualização, mas apenas interação para adm, descomentar o codigo abaixo
             <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-sm btn-primary disabled">
               Acessar
-            </a>
-            @endif
+            </a> --}}
           </div>
         </div>
+        @endif
+
       </div>
     </div>
 

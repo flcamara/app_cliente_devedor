@@ -83,4 +83,27 @@ class LoginController extends Controller
         session_destroy();
         return redirect()->route('index');
     }
+
+    public function primeiroacesso(Request $request){
+
+        //regra de autenticação
+        $regras = [
+            'senha' => 'required'  
+            ];
+    
+        //mensagens de feedback de validação
+        $feedback = [
+            'senha.required' => 'O campo senha é obrigatório'
+        ];
+        
+        $requeste->validate($regras, $feedback);
+
+
+        $admin = AppCliente::find($id);
+        // pegar a senha informada no form
+        $admin->password = $request->get('senha');
+        $admin->save();
+
+
+    }
 }

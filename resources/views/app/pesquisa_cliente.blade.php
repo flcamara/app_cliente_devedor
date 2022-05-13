@@ -2,7 +2,7 @@
 {{-- Permitindo que app/_componets/cabecalho_e_rodape.blade.php possa usar meu template --}}
 @extends('app.layouts._components.cabecalho_e_rodape')
 
-@section('counteudo')
+@section('conteudo')
 
 <div class="container mt-5 text-center">
     <h2>Pesquisa de clientes devedores</h2>

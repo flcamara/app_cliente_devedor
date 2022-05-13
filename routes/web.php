@@ -21,6 +21,8 @@ Route::get('/', 'PrincipalController@index')->name('index');
 
 Route::middleware('autenticar.acesso')->prefix('/app')->group(function () {
 
+    Route::patch('/login/primeiro-acesso', 'LoginController@primeiroacesso')->name('app.primeiroacesso');
+
     Route::get('/sair', 'LoginController@sair')->name('app.sair');
 
     Route::match(['get','post'], '/alterar-senha', 'AlterarSenhaController@alterarsenha')->name('app.alterarsenha');

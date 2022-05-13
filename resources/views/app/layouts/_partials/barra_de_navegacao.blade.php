@@ -18,15 +18,6 @@
                     <li>
                         <a href="{{ url('/app/cadastra-cliente') }}" class="nav-link">Clientes</a>
                     </li>
-                    @if($_SESSION['type'] == 1)
-                    <li>
-                        <a href="{{ url('/app/cadastrar-usuario') }}" class="nav-link">Usuários</a>
-                    </li>
-                    @else
-                    <li>
-                        <a href="{{ url('/app/cadastrar-usuario') }}" class="nav-link disabled">Usuários</a>
-                    </li>
-                    @endif                   
                     <li>
                         <a href="{{ url('/app/cadastrar-divida') }}" class="nav-link">Dívidas</a>
                     </li>

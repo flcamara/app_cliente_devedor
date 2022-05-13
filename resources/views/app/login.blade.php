@@ -2,7 +2,7 @@
 
 @section('titulo', 'Login')
 
-@section('conteudo')
+@section('login')
 <div class="container mt-3">
 <div class="login bg-light">
     <h2>Acesso: </h2>

@@ -4,7 +4,7 @@
 
 {{-- Passando um valor ('titulo' = 'Cadastrar cliente') para a mesma view --}}
 @section('titulo', 'Cadastrar cliente')
-@section('counteudo')
+@section('conteudo')
 
 
 {{-- Botões (Início) --}}
