@@ -23,11 +23,15 @@ class PesquisaClienteController extends Controller
 
         // Entra se houver requisição. Se a consulta for feita, a solicitação não vai estar vazia
         if (count($request->all()) != 0) {
-            $pesquisa = $request->all()['pesquisaClienteDevedor'];
+            if (isset($request->all()['todos'])) {  // Entra se o usuário pedir para listar todos os clientes
+                $consulta = AppCliente::all();
+            } else {
+                $pesquisa = $request->all()['pesquisa'];
 
-            $consulta = AppCliente::where('nome', 'like', "%$pesquisa%")  // Operarador LIKE do SQL (SELECT * FROM <tabela> WHERE <coluna> LIKE '%pesquisa%')
+                $consulta = AppCliente::where('nome', 'like', "%$pesquisa%")  // Operarador LIKE do SQL (SELECT * FROM <tabela> WHERE <coluna> LIKE '%pesquisa%')
                                     ->orWhere('cpf', $pesquisa)
                                     ->orWhere('cnpj', $pesquisa)->get();
+            }
         }
 
         return view('app.pesquisa_cliente', ['consulta' => $consulta]);
