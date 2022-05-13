@@ -6,7 +6,6 @@
 @section('titulo', 'Cadastrar cliente')
 @section('conteudo')
 
-@include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
 {{-- Botões (Início) --}}
 <ul class="nav nav-pills mb-3 col-3 mx-auto" id="pills-tab" role="tablist">
