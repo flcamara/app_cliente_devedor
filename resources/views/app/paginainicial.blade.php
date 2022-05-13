@@ -3,11 +3,9 @@
 @extends('app.layouts._components.cabecalho_e_rodape')
 
 
-
 @section('titulo', 'Home')
 
 @section('conteudo')
-
 
 
 <div class="container px-4 py-5" id="hanging-icons">
@@ -66,7 +64,6 @@
 
       </div>
     </div>
-
 
 
 @endsection

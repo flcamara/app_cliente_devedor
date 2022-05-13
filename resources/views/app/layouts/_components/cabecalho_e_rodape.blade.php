@@ -19,6 +19,7 @@
 
 </head>
 <body class="d-flex flex-column min-vh-100">
+
     {{--SVG icones--}}
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
@@ -38,7 +39,6 @@
 </svg>
 
     @include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
-
 
     {{-- Informando aonde o conteúdo extendido vai ser colocado --}}
     @yield('conteudo')
