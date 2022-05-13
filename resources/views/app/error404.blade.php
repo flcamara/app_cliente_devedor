@@ -1,9 +1,12 @@
+
 {{-- Permitindo que app/_componets/cabecalho_e_rodape.blade.php possa usar meu template --}}
 @extends('app.layouts._components.head_login')
 
 @section('titulo', 'Página não encontrada!')
 
 @section('login')
+
+@include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
 <div class="container regua">
     <div class="row">
@@ -17,6 +20,6 @@
     </div>
 </div>
 
+@include('app.layouts._partials.rodape')  {{-- Inlcuindo rodapé --}}
+
 @endsection
-
-

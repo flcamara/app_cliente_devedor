@@ -19,6 +19,7 @@
 
 </head>
 <body class="d-flex flex-column min-vh-100">
+<<<<<<< HEAD
 
     {{--SVG icones--}}
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -40,12 +41,11 @@
 
     @include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
+=======
+>>>>>>> f680af682f67251bb508601dd0850efb5d2e143b
 
     {{-- Informando aonde o conteúdo extendido vai ser colocado --}}
     @yield('conteudo')
-
-
-    @include('app.layouts._partials.rodape')  {{-- Inlcuindo rodapé --}}
 
     {{-- Javascript para o Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

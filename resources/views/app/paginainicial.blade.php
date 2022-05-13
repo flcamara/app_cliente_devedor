@@ -1,12 +1,14 @@
+
 {{-- Permitindo que app/_componets/cabecalho_e_rodape.blade.php possa usar meu template --}}
 @extends('app.layouts._components.cabecalho_e_rodape')
 @extends('app.layouts._components.head_login')
 
 
-
 @section('titulo', 'Home')
 
 @section('conteudo')
+
+@include('app.layouts._partials.barra_de_navegacao')  {{-- Inlcuindo barra de navegação --}}
 
 <div class="container px-4 py-5" id="hanging-icons">
       <h2 class="pb-2 border-bottom">Home</h2>
@@ -16,7 +18,7 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#person"/></svg>
           </div>
           <div>
-            <h2>Cliente</h2>
+            <h2>Clientes</h2>
             <p>Cadastre um novo cliente, ou consulte um já existente.</p>
             <a href="{{ url('/app/cadastra-cliente') }}" class="btn btn-sm btn-primary">
               Cadastrar
@@ -31,13 +33,13 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#debt"/></svg>
           </div>
           <div>
-            <h2>Divida</h2>
+            <h2>Dívidas</h2>
             <p>Cadastre uma nova divida, ou consulte algum débito já existente</p>
             <a href="{{ url('/app/cadastrar-divida') }}" class="btn btn-sm btn-primary">
               Cadastrar
             </a>
             <a href="{{ url('/app/listar-divida') }}" class="btn btn-sm btn-info">
-              Pesquisar
+              Listar
             </a>
           </div>
         </div>
@@ -49,7 +51,7 @@
             <svg class="bi" width="1em" height="1em"><use xlink:href="#admin"/></svg>
           </div>
           <div>
-            <h2>Usuarios</h2>
+            <h2>Usuários</h2>
             <p>Acesso restrito. Apenas Administradores conseguem acessar</p>
               <a href="{{ url('/app/cadastrar-usuario') }}" class="btn btn-sm btn-primary">
               Acessar
@@ -65,6 +67,6 @@
       </div>
     </div>
 
+@include('app.layouts._partials.rodape')  {{-- Inlcuindo rodapé --}}
+
 @endsection
-
-
