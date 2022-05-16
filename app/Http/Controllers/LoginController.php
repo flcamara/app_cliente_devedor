@@ -49,9 +49,11 @@ class LoginController extends Controller
         //Reaproveitando o model User do laravel
         $user = new User;
 
-        $usuario = $user->where('username', $username)->where('password', $password)->
-        orWhere('email', $username)->where('password', $password)
-        ->get()->first();
+        $usuario = $user->where('username', $username)
+                        ->where('password', $password)
+                        ->orWhere('email', $username)
+                        ->where('password', $password)
+                        ->get()->first();
     
 
         /*

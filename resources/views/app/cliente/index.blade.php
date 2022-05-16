@@ -7,7 +7,7 @@
 
 <div class="container mt-5 text-center ">
     <h2>Pesquisa de clientes devedores</h2>
-    <form action="{{ route('app.pesquisa.cliente') }}" class="row g-4 justify-content-center mt-1" method="GET">
+    <form action="{{ route('cliente.index') }}" class="row g-4 justify-content-center mt-1" method="GET">
 
         <div class="col-md-5">
             <label for="pesquisa" class="visually-hidden"></label>
@@ -19,7 +19,7 @@
 
         <div class="col-auto">
             {{-- Cria uma parametro na URL via GET informando para o Controller saber que ele quer todos os clientes --}}
-            <a type="button" href="{{ url('app/pesquisa-cliente?todos=true') }}" class="btn btn-secondary mb-3">Listar todos</a>
+            <a type="button" href="{{ url('app/cliente?todos=true') }}" class="btn btn-secondary mb-3">Listar todos</a>
         </div>
 
 
